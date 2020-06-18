@@ -17,7 +17,7 @@ public class FactorialCalculator extends BasePage {
     private String expectedResult = "The factorial of 6 is: 720";
     private String testErr = " ";
     private String expectedErr = "Please enter an integer";
-    private String expectedTittle = "The greatest factorial calculator!";
+    private String expectedTitle = "The greatest factorial calculator!";
 
     /**
      * This method use '6' as input data to verify the factorial calculation.
@@ -54,6 +54,6 @@ public class FactorialCalculator extends BasePage {
     public void checkTittle (IOSDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.presenceOfElementLocated(title));
-        Assert.assertEquals(driver.findElement(title).getText(), expectedTittle);
+        Assert.assertEquals(driver.findElement(title).getText(), expectedTitle);
     }
 }
